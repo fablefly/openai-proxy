@@ -39,7 +39,7 @@ export async function middleware(
     }
 
     if (request.nextUrl.pathname === '/') {
-        return NextResponse.redirect(new URL('https://github.com/UNICKCHENG/openai-proxy', request.url));
+        return new Response("err find", { status: 400 });
     }
 
     if (ratelimit) {
